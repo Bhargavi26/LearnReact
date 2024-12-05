@@ -6,7 +6,7 @@
 
 import React, { useState } from 'react';
 
-const ControlledComponent = () => {
+const UseState = () => {
 
     const [inputText, setInputText] = useState("")
     const [counter, setCounter] = useState(0)
@@ -16,7 +16,7 @@ const ControlledComponent = () => {
         console.log(counter)
     }
 
-    console.log('Controlled Re-Render')
+    console.log('Use State Re-Render')
 
     return (
         <form>
@@ -34,4 +34,4 @@ const ControlledComponent = () => {
 }
 
 
-export default ControlledComponent;
+export default UseState;

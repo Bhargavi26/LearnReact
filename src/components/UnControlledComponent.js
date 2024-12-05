@@ -5,22 +5,25 @@
 
 
 import React, { useRef } from 'react';
-import { Input, Button } from '@material-ui/core';
-
 
 const UnControlledComponent = () => {
 
     const inputRef = useRef(null);
+    const countRef = useRef(0)
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        countRef.current++
         console.log(inputRef.current.value)
+        console.log(countRef.current)
     }
 
+    console.log('Uncontrolled Render')
     return (
         <form>
-            <Input text="text" placeholder='uncontrolled' inputRef={inputRef} />
-            <Button onClick={handleSubmit}>Submit</Button>
+             Uncontrolled Component:
+            <input text="text" placeholder='uncontrolled' ref={inputRef} />
+            <button onClick={handleSubmit}>Submit</button>
         </form>
 
     );
