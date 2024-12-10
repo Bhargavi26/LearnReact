@@ -11,7 +11,7 @@ const CreateRef = () => {
 
     return (
         <>
-         Create Ref:
+         <h1>Create Ref</h1>
             <input ref={inputElement} />
             <button onClick={handleInput}>Click to Focus</button>
         </>

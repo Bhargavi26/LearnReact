@@ -1,24 +1,38 @@
+//The useRef hook is often used to store mutable values that don’t trigger re-renders
 
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
+import UseRefFocus from './UseRefFocus';
+import UseRefPreviousStateValue from './UseRefPreviousStateValue';
+import UseRefRender from './UseRefRender';
+import UseRefRenderStateChange from './UseRefRenderStateChange';
+import CreateRef from './CreateRef';
+import UseRefVsCreateRef from './UseRefVsCreateRef';
+import CreateRefPreviousStateValue from './CreateRefPreviousStateValue';
 
 const UseRef = () => {
-
-    const inputElement= useRef(null);
-
-    const handleInput = (e) => {
-      inputElement.current.focus();
-    }
-
     return (
-        <>
-        Use Ref:
-            <input ref={inputElement} />
-            <button onClick={handleInput}>Click to Focus</button>
-        </>
-
-    );
-
+        <div>
+        <UseRefFocus/>
+        <br/>
+        <br/>
+        <UseRefPreviousStateValue/>
+        <br/>
+        <br/>
+        <UseRefRender/>
+        <br/>
+        <br/>
+        <UseRefRenderStateChange/>
+        <br/>
+        <br/>
+        <CreateRef/>
+        <br/>
+        <br/>
+        <UseRefVsCreateRef/>
+        <br/>
+        <br/>
+        <CreateRefPreviousStateValue/>
+        </div>
+    )
 }
 
-
-export default UseRef;
+export default UseRef

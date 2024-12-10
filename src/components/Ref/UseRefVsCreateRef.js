@@ -16,14 +16,17 @@ const UseRefVsCreateRef = () => {
     const refFromCreateRef = createRef();
 
     if (!refFromUseRef.current) {
+        console.log('useRef log'+ refFromUseRef.current)
         refFromUseRef.current = renderIndex
     }
 
     if (!refFromCreateRef.current) {
+        console.log('CreateRef log'+ refFromCreateRef.current)
         refFromCreateRef.current = renderIndex
     }
     return (
         <>
+         <h1>Use Ref vs Create Ref</h1>
             <p>Current Render Index : {renderIndex} </p>
             <p>
                 <b>refFromUseRef</b> value : {refFromUseRef.current}

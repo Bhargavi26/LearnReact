@@ -1,4 +1,6 @@
 
+//It can be used to store a mutable value that does not cause a re-render when updated.
+
 import React, { useRef } from 'react';
 
 const UseRefReRender = () => {
@@ -11,9 +13,10 @@ const UseRefReRender = () => {
     }
 
     console.log('Component Rendered')
+    alert('Component Rendered')
     return (
         <>
-            Use Ref Update Value:
+            <h1>Use Ref Component Render Count</h1>
 
             <button onClick={handleClick}>Click Me </button>
         </>
