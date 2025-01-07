@@ -108,7 +108,21 @@ align-items: center;
   
     .card{
       flex: 0 0 100%;
-      max-width:100%;
+      max-width: 0 0 calc(50% - 20px);
     }
+  }
+  .column {
+    float: left;
+    width: 35%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+
+    clear: both;
   }
 }

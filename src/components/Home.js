@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import FetchGet from './APICallsData/FetchGet';
-
+import LearnEqualizer from './Equalizer/LearnEqualizer';
+import TimerApp from './SimpleApps/TimerApp';
+import ShadowRoot from './SimpleApps/ShadowRoot';
+import FormValidation from './SimpleApps/FormValidation';
 
 function Home() {
 
@@ -60,6 +63,7 @@ function Home() {
       <section className='section'>
         <div className='container'>
           <h1 className='h1'>Responsive Cards</h1>
+          <FormValidation/>
           <FetchGet/>
           <div className='cards'>
             {
@@ -88,7 +92,9 @@ function Home() {
               ))
             }
           </div>
-
+<LearnEqualizer/>
+<TimerApp/>
+<ShadowRoot />
         </div>
       </section>
     </div >

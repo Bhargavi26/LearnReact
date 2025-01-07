@@ -20,6 +20,7 @@ import ExNoMemo from './components/useMemoHook/ExNoMemo';
 import ExYesMemo from './components/useMemoHook/ExYesMemo';
 import Callback from './components/useCallback/Callback';
 import Memo from './components/useMemoHook/Memo';
+import { SimpleApps } from './components/BuildSimpleApp/SimpleApps';
 
 
 function App() {
@@ -55,7 +56,7 @@ function App() {
         <Route path="/callback" element={<Callback />} />
         <Route path="/memo" element={<Memo />} />
         <Route path="/lifecycle" element={<LifeCycle />} />
-        
+        <Route path ='/simpleapps' element={<SimpleApps/>} />
       </Routes>
     </Router >
   );
